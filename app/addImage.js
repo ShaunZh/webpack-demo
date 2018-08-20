@@ -1,6 +1,8 @@
-let bigImage = document.createElement('img');
-bigImage.src = require('../images/big.jpg');
-document.body.appendChild(bigImage);
+import '../styles/addImage.css'
+
+// let bigImage = document.createElement('img');
+// bigImage.src = require('../images/big.jpg');
+// document.body.appendChild(bigImage);
 
 let smallImage = new Image();
 smallImage.src = require('../images/small.jpg');
