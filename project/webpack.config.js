@@ -14,7 +14,8 @@ const VENOR = ["faker",
   "react-redux",
   "redux",
   "redux-form",
-  "redux-thunk"
+  "redux-thunk",
+  "react-router"
 ]
 
 module.exports = {
