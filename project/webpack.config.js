@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const VENOR = ["faker",
   "lodash",
   "react",
@@ -37,6 +38,10 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
       minChunks: Infinity
-    })
+    }),
+    new CleanWebpackPlugin(['dist/bundle.*.js', 'dist/manifest.*.js'],  {
+      verbose: true,
+      dry:false
+    }) 
   ]
 };
