@@ -11,7 +11,6 @@ import '../style/style.css';
 
 const App = () => {
   const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
-
   return (
     <Provider store={store}>
       <Routes />
