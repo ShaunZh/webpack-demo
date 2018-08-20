@@ -1,7 +1,11 @@
 const webpack = require('webpack');
 const path = require('path');
 
+// 用于在build之前清除需要重新生成的文件
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+// 将打包后的js、css、img文件插入到html模板文件中，生成最终的html文件
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VENOR = ["faker",
   "lodash",
   "react",
@@ -42,6 +46,9 @@ module.exports = {
     new CleanWebpackPlugin(['dist/bundle.*.js', 'dist/manifest.*.js'],  {
       verbose: true,
       dry:false
+    }),
+    new HtmlWebpackPlugin({
+      template: 'index.html'
     }) 
   ]
 };
